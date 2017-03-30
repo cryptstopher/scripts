@@ -1,11 +1,12 @@
 function makeNiceMyHtmlEntities() {
     var fun = document.getElementById("content").innerHTML; 
-    var makingNice = fun.replace(" -- ", "&mdash;");
+    var makingNice = fun.replace(/ -- /g, "&mdash;");
     document.getElementById("content").innerHTML = makingNice;
 }
 
 window.onload = makeNiceMyHtmlEntities;
 
 /* 
-<script type="text/javascript" src="https://smasho.net/makeNice.js"></script>
+#+OPTIONS: -:nil
+#+HTML_HEAD: <script type="text/javascript" src="https://raw.githubusercontent.com/stanordan/scripts/master/makeNice.js"></script>
 */
